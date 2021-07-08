@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>js数据的转换</title>
+		<script>
+			var a1 = "a";	//NaN Number类型
+			var a2 = "123";		//123
+			var a3 = true;	//true-1 false-0
+			var a4 = new Date();  //对象对应的数值
+			var a5 = null;  //0
+			var a6;  //NaN
+			console.log(typeof Number(a1))
+			console.log(Number(a2))
+			console.log(Number(a3))
+			console.log(Number(a4))
+			console.log(Number(a5))
+			console.log(Number(a6))
+			console.log("-------------------")
+			var b1 = 123;
+			var b2 = -123;
+			var b3 = 0;
+			var b4 = "abd";
+			var b5 = "";
+			var b6 = new Date();
+			var b7 = null;
+			var b8;
+			console.log(Boolean(b1));
+			console.log(Boolean(b2));
+			console.log(Boolean(b3));
+			console.log(Boolean(b4));
+			console.log(Boolean(b5));
+			console.log(Boolean(b6));
+			console.log(Boolean(b7));
+			console.log(Boolean(b8));
+		</script>
+	</head>
+	<body>
+		<h1>js数据的转换</h1>
+		<hr />
+	</body>
+</html>
+<!-- 
+	JS中的数据转换：
+		其他类型转为number类型：
+		使用Number(数据)
+			string类型数字类型	对应数字
+			string非数字字符		NaN
+			boolean true 		1
+			boolean false 		0
+			object 有具体值		数字
+			object null 		0
+		其他类型转为boolean类型
+		使用Boolean(数据)
+			number 正数或负数	true
+			number 0 			false
+			string 非空串		true
+			string 空串			false
+			object 有具体对象	true
+			object null 		false
+			声明未赋值的对象undefined		false
+ -->

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>js操作html元素的属性</title>
+		<script>
+			// 声明函数
+			function testField(){
+				//获取属性值
+				var inp = document.getElementById("uname");
+				//获取元素属性值
+				alert(inp.type+","+inp.name+","+inp.id);
+			}
+			function testField2(){//修改属性值
+				//获取属性值
+				var inp = document.getElementById("uname");
+				// 修改元素属性值
+				inp.value = "haha";
+				inp.type = "button";
+			}
+			// 自定义函数
+			function testOwnField(){
+				// 获取属性值
+				var inp = document.getElementById("uname"); 
+				//获取自定义属性值
+				alert(inp.getAttribute("abc"));
+			}
+			function testOwnField2(){
+				// 获取属性值
+				var inp = document.getElementById("uname"); 
+				//获取自定义属性值
+				inp.setAttribute("abc","456");
+				//再次获取自定义属性值
+				alert(inp.getAttribute("abc"));
+			}
+			function test(){
+				// 获取属性值
+				var inp = document.getElementById("uname"); 
+				alert(inp.getAttribute("type"));
+				alert(inp.getAttribute("value"));
+				inp.setAttribute("value","nihao")
+				inp.setAttribute("type","button")
+			}
+		</script>
+	</head>
+	<body>
+		<h1>js操作html元素的属性</h1>
+		<hr>
+		<input type="button" value="测试获取元素属性 - 固有" onclick="testField()"/>
+		<input type="button" value="测试修改元素属性 - 固有" onclick="testField2()"/>
+		<input type="button" value="测试获取元素属性 - 自定义" onclick="testOwnField()"/>
+		<input type="button" value="测试修改元素属性 - 自定义" onclick="testOwnField2()"/>
+		<input type="button" value="自定义方式操作固有属性" onclick="test()"/>
+		<br />
+		用户名：<input type="text" name="uname" id="uname" abc="123" />
+	</body>
+</html>
+<!-- 
+ 获取元素对象
+	直接获取：
+	间接获取：
+ 操作元素属性
+	获取：
+		固有：元素对象.属性名   //返回当前属性的属性值
+		自定义：元素对象.getAttribute("属性名")    //返回自定义属性值
+	修改：
+		固有：元素对象名.属性名 = 属性值
+		自定义：元素对象名.setAttribute("属性名","属性值")
+	注：
+		可以使用自定义的方式 获取固有属性的内容，但是获取到的value为默认值，不能获取实时的用户数据。尽量不要去修改元素的id和name属性值
+ 操作元素内容
+	获取：
+		元素对象名.innerHTML，返回当前元素对象的所有内容，包括HTML标签
+		元素对象名.innerText，返回当前元素对象的文本内容，不包括HTML标签
+	修改：
+		元素对象名.innerHTML = "新的值"，会将原有内容覆盖，html标签会解析
+				元素对象名.innerHTML = 元素对象名.innerHTML+"新的值"，追加效果
+		元素对象名.innerText = "新的值"，会将原有内容覆盖，html标签不会解析，作为一个普通的文本显示在页面
+操作元素的样式
+	通过style属性：元素对象名.style.样式名 = "样式值"，如果原来没有则是添加效果（有的话是修改）。
+				  操作的是HTML元素的style属性，并没有修改css代码域中的样式
+	通过className：
+				  元素对象名.className = "新的值"，添加或修改
+				  元素对象名.className = ""；删除类样式
+操作文档结构
+	增加元素：
+	删除元素：
+		第一种方式：使用innerHTML
+			元素对象名.innerHTML = 元素对象名.innerHTML+"新的值"，追加效果，增加节点。、
+			元素对象名.innerHTML = ""；//删除元素的所有自己节点
+			通过父元素删除指定子元素：父节点对象.removeChild(子节点对象)。
+		第二种方式：创建元素对象
+			var obj = document.createElement("标签名");
+			追加：元素对象名.appendChild(obj)
+		
+		
+ -->

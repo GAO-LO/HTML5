@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>js的window对象</title>
+		<script>
+			function testAlert(){
+				var a = window.alert("我是警告框");/* window可以取消 */
+				console.log(a)
+			}
+			function testConfirm(){
+				var flag = confirm("你确认要删除吗");
+				console.log(flag)
+			}
+			function testPrompt(){
+				var a = prompt("请输入密码");
+				console.log(a)
+			}
+			/* 定时器、间隔器--------------------------------------- */
+			function testSetTime(){
+				sto = window.setTimeout(function(){
+					alert("我是定时执行");
+				},3000);
+			}
+			var sto;//定时器
+			var sit;//间隔器
+			function testSetInterval(){
+				sit = window.setInterval(function(){
+					alert("我是间隔执行");
+				},2000);
+			}
+			/* 停止当前的定时器、间隔器 */
+			function testClearTimeout(){
+				window.clearTimeout(sto);
+			}
+			function testClearinterval(){
+				window.clearInterval(sit);
+			}
+			/* 测试地址栏属性------------------------------------ */
+			function testLocation(){
+				window.location.href = "http://www.baidu.com";
+			}
+			function testLocation2(){
+				window.location.reload();
+			}
+			// 屏幕属性
+			function testScreen(){
+				var x = window.screen.width;
+				var y = window.screen.height;
+				alert(x+","+y);
+				// 浏览器的配置属性
+				var str = window.navigator.userAgent;
+				alert("浏览器配置属性"+str);
+			}
+			function testHistory(){
+				window.history.go(1);
+			}
+			
+		</script>
+	</head>
+	<body>
+		<h1>js的window对象</h1>
+		<hr />
+		<input type="button" value="测试警告框" onclick="testAlert()"/>
+		<input type="button" value="测试确认框" onclick="testConfirm()"/>
+		<input type="button" value="测试提示框" onclick="testPrompt()"/>
+		<hr />
+		<input type="button" value="测试setTime-定时执行" onclick="testSetTime()"/>
+		<input type="button" value="测试setInterval-间隔执行" onclick="testSetInterval()"/>
+		<input type="button" value="测试clearTimeout-停止指定定时器" onclick="testClearTimeout()"/>
+		<input type="button" value="测试clearinterval-停止指定间隔器 " onclick="testClearinterval()"/>
+		<hr />
+		<input type="button" value="测试地址栏属性-location-跳转资源" onclick="testLocation()"/>
+		<input type="button" value="测试地址栏属性-location-重新加载资源" onclick="testLocation2()"/>
+		<input type="button" value="测试屏幕属性-screen" onclick="testScreen()"/>
+		<input type="button" value="测试历史记录-history" onclick="testHistory()"/>
+		
+	</body>
+</html>
+<!-- 
+BOM浏览器对象模型：是用来规范浏览器对js语言的支持
+	（js调用浏览器本身的功能）
+BOM的具体表象window对象
+	1.window对象不用new 直接使用即可，window关键字可以省略不写
+	2.框体方法
+		alert：警告框 提示一个警告信息 返回undefind
+		confirm：确认框 确认true 取消false
+		prompt：提示框 提示输入某个信息 点击取消返回null，点击确认（默认空串）返回当前输入的数据
+	3.定时和间隔执行的函数
+		setTime：指定的时间后执行指定的函数
+			参数1：函数对象
+			参数2：时间，毫秒
+			返回值：返回当前定时的id
+		setInterval：每间隔指定的时间后执行指定的函数
+			参数1：函数对象
+			参数2：时间，毫秒
+			返回值：返回当前间隔的id
+		clearTimeout：用来停止指定的定时器
+			参数：定时器id
+		clearinterval：用来停止指定的间隔器
+			参数：间隔器id	
+		
+ -->

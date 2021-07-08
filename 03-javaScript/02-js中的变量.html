@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>js中的变量</title>
+		<!-- 声明js代码域 -->
+		<script>
+			// 单行注释
+			/* 多行注释 */
+			/* js中的变量 */
+			var a = 123;
+			var b = 456.0;
+			var c = "js";
+			var d = 'java'
+			var e = new Date();
+			var g = true;
+			typeof(a)
+			
+			console.log(typeof(a));
+			console.log(typeof(b));
+			console.log(typeof(c));
+			console.log(typeof(d));
+			console.log(typeof(e));
+			console.log(typeof(g));
+			console.log(isNaN(a)); not a number
+		</script>
+	</head>
+	<body>
+		<h3>js中的变量</h3>
+		<hr />
+		<input type="button" onclick="alert(123)"/>
+	</body>
+</html>
+<!-- 
+js:LiveScript--- >javaScript
+	js是面向对象的弱类型的语言，属于脚本语言，不需要编译
+	有浏览器解析执行，可以嵌入到html页面中
+引入方式：
+	(事件定义式)
+	内联样式：在标签上的事件属性上添加js代码，当触发事件时执行js代码
+	(嵌入式)
+	内部样式：在html页面上添加<script></script>，在标签里写js代码
+	外部样式：将外部写好的js文件通过<script>标签src属性引入
+注：同一个<script>标签不可同时引入外部js文件有书写内部js代码
+	
+	var 变量名 = 变量值
+	注：所有的变量声明都使用var关键字
+	若声明同一变量，新的变量值将原有的变量值覆盖
+常见类型：
+	1.数值类型 number
+		所有数字都是number类型，浮点型 整型
+		4/5=0.8
+	2.字符串类型 string
+		var s1 = "abc";
+		var s1 = 'abc';
+	3.布尔类型 boolean
+		var b = true/false;
+	4.自定义类型 object
+		var o = new Date()/null;
+	5.未定义类型 undefined
+		var u = undefined;
+		var u;//变量只声明，未赋值。默认为undefined
+ -->

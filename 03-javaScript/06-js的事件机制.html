@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>js的事件机制</title>
+		<script>
+			function testOnclick(){
+				alert("单击事件");
+			}
+			function testOndblclick(){
+				alert("双击事件");
+			}
+			function testMnmousemove(){
+				alert("移动事件");
+			}
+			function testOnmouseover(){
+				alert("悬停事件");
+			}
+			function testOnmouseout(){
+				alert("移出事件");
+			}
+			function testkeydown(){
+				alert("键盘按下事件");
+			}
+			function testkeyup(){
+				alert("键盘谈起事件");
+			}
+			function testFoucus(){
+				alert("获取焦点事件");
+			}
+			function testBlur(){
+				alert("失去焦点事件");
+			}
+			function testOnload(){
+				alert();
+			}
+			function test(){
+				alert("测试一个事件上调用多个函数,但是不同的函数用分号隔开");
+			}
+			function testA(){
+				alert("事件阻断");
+				return false;/* 阻断，页面不能跳转 */
+			}
+			function testHref(){
+				alert("超链接调用js函数");
+			}
+			function testOnchange(){
+				alert("改变");
+			}
+		</script>
+		<style>
+			div{
+				width: 300px;
+				height: 300px;
+				border: 1px solid;
+			}
+		</style>
+	</head>
+	<body onload="testOnload()">
+		<h1>js的事件机制</h1>
+		<hr>
+		<input type="button" value="测试单击" onclick="testOnclick()"/>
+		<input type="button" value="测试双击" ondblclick="testOndblclick()"/>
+		<hr>
+		<!-- 鼠标事件 -->
+		<div class="showdiv" 
+			onmousemove="testMnmousemove()"
+			onmouseover="testOnmouseover()"
+			onmouseout="testOnmouseout()">
+		</div>
+		<hr>
+		<!-- 键盘事件 -->
+		<p>键盘时间的学习</p>
+		键盘按下：<input type="text" onkeydown="testkeydown()"/>
+		键盘谈起：<input type="text" onkeyup="testkeyup()"/>
+		<hr>
+		<p>焦点事件的学习</p>
+		获取焦点：<input type="text" onfocus="testFoucus()" />
+		失去焦点：<input type="text" onblur="testBlur()" onchange="testOnchange()"/>
+		<hr>
+		<p>事件阻断</p>
+		<a href="http://www.baidu.com" target="_blank"
+		  onclick="return testA()">百度一下</a><!-- target="_blank"新标签页打开 -->
+		<hr>
+		<a href="javascript:testHref()">超链接标签调用js函数</a>
+		<hr>
+		<select name="" onchange="testOnchange()">
+			<option value="">1</option>
+			<option value="">2</option>
+			<option value="">3</option>
+		</select>
+	</body>
+</html>
+
+<!-- 
+ js的事件机制：
+	1.给标签添加合适的事件
+		onchange---值改变事件 select
+		onload--body
+		单击事件---用户会进行单击动作dehtml元素
+		双击事件
+		鼠标事件
+		键盘事件
+		焦点事件
+	2.给一个元素添加多个事件，多个事件之间不可冲突
+	3.一个事件调用多个函数，不同函数之间用分号隔开
+	4.事件阻断
+		return：true/false
+		false：会阻断当前元素的功能
+		true：不会阻断当前元素的功能
+	5.超链接标签a调用js函数
+		<a href="javascript:函数名()"></a>
+ -->

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>js操作元素的样式</title>
+		<script>
+			function test1(){
+				// 获取元素对象
+				var showdiv = document.getElementById("showdiv");
+				// 添加元素样式
+				showdiv.style.backgroundColor="#0055FF";
+				// 修改元素样式
+				showdiv.style.border="dashed 4px red";
+				// 删除元素样式
+				showdiv.style.border="";
+				
+			}
+			function test2(){
+				// 获取元素对象
+				// document.getElementById("div01").style.backgroundColor="red"
+				var div01 = document.getElementById("div01");
+				// 获取className
+				alert(div01.className);
+				//修改className
+				div01.className = "common2";
+				// 删除
+				div01.className = "";
+			}
+		</script>
+		<style>
+			#showdiv{
+				width: 180px;
+				height: 180px;
+				border: #0055ff dashed 1px;
+			}
+			.common{
+				width: 200px;
+				height: 200px;
+				background-color: #ffff7f;
+			}
+			.common2{
+				width: 200px;
+				height: 200px;
+				background-color: #ffff7f;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>js操作元素的样式</h1>
+		<hr >
+		<input type="button" value="测试操作元素样式--style" onclick="test1()"/>
+		<input type="button" value="测试操作元素样式--className" onclick="test2()"/>
+		<div id="showdiv" style="border: #FF0000 2px solid;">
+		</div>
+		<div id="div01" class="common">
+			
+		</div>
+	</body>
+</html>

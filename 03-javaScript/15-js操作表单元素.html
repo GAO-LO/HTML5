@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>js操作表单元素</title>
+		<script type="text/javascript">
+			function test1(){
+				// 获取所有多选元素对象
+				var favs = document.getElementsByName("fav");
+				// alert(favs[1].checked);
+				// 遍历
+				for(var i=0;i<favs.length;i++){
+					if(favs[i].checked){
+						alert(favs[i].value+","+favs[i].checked);
+					}
+				}
+			}
+			function test2(){
+				// 获取所有多选元素对象
+				var favs = document.getElementsByName("fav");
+				for(var i=0;i<favs.length;i++){
+					favs[i].checked = true;
+				}
+			}
+			function test3(){
+				// 获取所有多选元素对象
+				var favs = document.getElementsByName("fav");
+				for(var i=0;i<favs.length;i++){
+					favs[i].checked =! favs[i].checked;
+				}
+			}
+			function test4(){
+				// 获取下拉框对象
+				var sel = document.getElementById("add");
+				// 获取下拉框下所有option
+				var ops = sel.options;
+				// 遍历
+				for(var i=0;i<ops.length;i++){
+					if(ops[i].selected){
+						alert(ops[i].text+","+ops[i].value)/* 获取到的是文本和value */
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<h1>js操作表单元素</h1>
+		<hr />
+		<input type="checkbox" name="fav" id="fav" value="1" />see you again   <br />
+		<input type="checkbox" name="fav" id="fav" value="2" />红色高跟鞋   <br />
+		<input type="checkbox" name="fav" id="fav" value="3" />我和我的祖国   <br />
+		<input type="checkbox" name="fav" id="fav" value="4" />丑八怪   <br />
+		<input type="checkbox" name="fav" id="fav" value="5" />弹棉花   <br />
+		<input type="checkbox" name="fav" id="fav" value="6" />无价之姐   <br><br>
+		<input type="button" value="播放" onclick="test1()"/>
+		<input type="button" value="全选"  onclick="test2()"/>
+		<input type="button" value="反选"  onclick="test3()"/>
+		<hr />
+		<select name="" id="add" onchange="test4()">
+			<option value="1">北京</option>
+			<option value="2">上海</option>
+			<option value="3">广州</option>
+			<option value="4">深圳</option>
+		</select>
+	</body>
+</html>

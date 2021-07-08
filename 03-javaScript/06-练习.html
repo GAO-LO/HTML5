@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			function on1(){
+				alert("移动事件");
+			}
+			function on2(){
+				alert("悬停事件");
+			}
+			function on3(){
+				alert("移出事件");
+			}
+		</script>
+		<style>
+			div{
+				width: 300px;
+				height: 300px;
+				border: 2px solid;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="showdiv"
+			onmousemove="on1()"
+			onmouseover="on2()"
+			onmouseout="on3()">
+		</div>
+	</body>
+</html>

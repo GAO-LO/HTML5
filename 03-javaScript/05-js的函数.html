@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>js的函数</title>
+		<!-- 声明代码域 -->
+		<script type="text/javascript">
+			/* 声明函数 */
+			// 方式一
+			// 无参无返回值
+			function f1(){
+				alert("函数f1");
+			}
+			// 有参有返回值
+			function f2(name,age){
+				alert("函数f2"+name+","+age);
+			}
+			// 无参无返回值
+			function f3(){
+				alert("函数f4");
+				return "123";
+			}
+			// 有参有返回值
+			function f4(a,b){
+				alert("函数f4");
+				return a+b;
+			}<!-- 调用函数 -->
+			/* var c = f1();
+			var d = f2();
+			var a = f3();
+			console.log(a);
+			var b = f4();
+			console.log(1,2,3,4,5);
+			console.log(c);
+			console.log(d); */
+			// 方式二:
+			var f5 = new Function("a1","a2","alert('函数声明的第二种方式'+a1)");
+			f5(12,25);
+			// 方式三
+			var f6 = function(a){
+				alert("函数声明的第三种方式"+a);
+			}
+			f6(288);
+		</script>
+	</head>
+	<body>
+		<h1>js的函数</h1>
+		<input type="button" onclick="f5(25,26)"/>
+		<button onclick="f6(6)">点击</button>
+	</body>
+</html>
+<!-- 
+ js中函数：
+	作用：对功能的封装，减少代码的冗余。
+	函数的声明：
+		方式一：function 函数名（形参1，形参2....）{执行体}
+		方式二：
+	函数的参数：
+		js在调用函数时，形参可以不赋值，不会报错
+		js在调用函数时，形参可以不全赋值，不会报错，但是实参会依次对形参赋值
+	函数的返回值：
+		如果js有返回值，直接返回，
+		无返回值默认返回的是undefined
+ 
+ -->

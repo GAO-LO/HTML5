@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>js运算符</title>
+		<script>
+			console.log("123a"+2);
+			console.log(true+2);
+			console.log(true*"123");
+			/* 在算数运算中如果都不是number类型会使用number强转后在运算
+				字符串的加法会做字符创拼接，不会运算
+			 */
+			console.log(true-"123a");
+			/* 
+			 算术运算：+ - * / % ++ --
+			 关系：> < >= <= == != === !==
+			 逻辑运算：& && | || !
+			 赋值运算：+= -= /= %= *= 
+			 三目运算： ？ ：
+			 */
+			var a = 10; 
+			console.log(a>10?1:-1);
+			console.log("----------");
+			
+			var a = 1;
+			var a1 = "1";
+			var a2 = true;
+			var a3 = "true";
+			var a4 = "a";
+			var a5 = "a";
+			console.log(a==a1);
+			console.log(a==a2);
+			console.log(a==a3);
+			console.log(a1==a2);
+			console.log(a2==a3);
+			console.log(a4==a5);
+			/* 
+			 ==:
+			 先判断类型，类型一致比较内容，类型不一致，使用
+			 number转换后进行比较
+			 ===：
+			 类型及内容完全相同时，返回true
+			 */
+			console.log(null==undefined);//true
+			console.log(null===undefined);//false
+		</script>
+	</head>
+	<body>
+		<h1>js运算符</h1>
+		<hr />
+	</body>
+</html>

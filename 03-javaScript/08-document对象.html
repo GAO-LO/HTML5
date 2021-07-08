@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>document对象</title>
+		<script>
+			function testGetEleById(){
+				var inp = window.document.getElementById("uname");
+				alert(inp);
+			}
+			function testGetEleByName(){
+				var favs = document.getElementsByName("fav");
+				alert(favs);
+			}
+			function testGetEleByTagName(){
+				var inps = document.getElementsByTagName("input");
+				alert(inps);
+			}
+			function testGetEleByClassName(){//class属性
+				var inps = document.getElementsByClassName("input");
+				alert(inps);
+			}
+			// 间接获取
+			function testParent(){
+				// 获取父级元素
+				var div = document.getElementById("showdiv");
+				// 获取所有子元素
+				var chs = div.childNodes;
+				alert(chs.length);
+			}
+			function testChild(){
+				//获取子元素
+				var inp = document.getElementById("inp");
+				var div = inp.parentNode;
+				alert(div);
+			}
+			function testBrother(){
+				var inp = document.getElementById("inp");
+				var preEle = inp.previousSibling;//地获取熊
+				var nextEle = inp.nextSibling;//兄弟获取
+				alert(perEle+","+nextEle);
+			}
+		</script>
+		<style>
+			div{
+				width: 100%;
+				height: 300px;
+				border: red 1px solid;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>document对象</h1>
+		<hr>
+		<h3>直接获取的方式</h3>
+		<input type="button" value="测试获取html元素对象-id" onclick="testGetEleById()"/>
+		<input type="button" value="测试获取html元素对象-name" onclick="testGetEleByName()"/>
+		<input type="button" value="测试获取html元素对象-TagName" onclick="testGetEleByTagName()"/>
+		<input type="button" value="测试获取html元素对象-className" onclick="testGetEleByClassName()"/>
+		<hr />
+		用户名：<input type="text" name="name" id="uname" /><br/>
+		<input type="checkbox" name="fav" id="fav" class="common"/>唱
+		<input type="checkbox" name="fav" id="fav" class="common"/>跳
+		<input type="checkbox" name="fav" id="fav" class="common"/>rap
+		<input type="checkbox" name="fav" id="fav" class="common"/>篮球
+		<hr />
+		<h3>间接获取方式</h3>
+		<input type="button" value="测试父子关系" onclick="testParent()"/>
+		<input type="button" value="测试子父关系" onclick="testChild()"/>
+		<input type="button" value="测试兄弟关系" onclick="testBrother()"/>
+		<div id="showdiv">
+			<input type="text">
+			<input type="text" id="inp">
+			<input type="text">
+			<input type="text">
+			<input type="text">	
+		</div>
+	</body>
+</html>
+<!-- 
+ js的document对象
+ 文档对象模型
+	1.作用：浏览器对外提供的支持js的用来操作html稳当的一个对象，此对象中封存的html稳当所有信息
+	2.使用document
+		2.1)获取html元素对象
+			直接获取：
+				getEleById("id的属性值")
+				getEleByName("name属性值")
+				getEleByTagName("标签名")
+				getEleByClassName("class属性值")
+			间接获取：
+				父子：div.childNodes
+				子父：inp.parentNode
+				兄弟：inp.previousSibling、inp.nextSibling
+ 
+ 
+ -->
