@@ -1,0 +1,59 @@
+*all{
+	margin: 0;
+	padding: 0;
+}
+div.inner,table{
+	position:absolute;/* 绝对定位 */
+}
+body{
+	background-image:url(../img/wangye.png);
+	background-size:100%;/* 背景图片大小100% */
+}
+.outer{
+	height: 100%;    
+}
+.inner{
+	border: 5px solid rgba(255,255,255,1);/* 透明度 */
+	border-radius: 20px;/* 圆角 */
+	width: 370px;
+	height: 340px;
+	top: 40%;
+	left: 76%;
+	transform: translate(-50%,-50%);/* 元素会以自身的左上角为原点，往下往→分别移动自身长宽的50%，以使其居于中心位置 */
+	box-shadow:11px 11px 11px rgba(50,50,50,1);	///边框阴影
+}
+.table{
+	top: 7%;
+	left: 12%;
+	width: 260px;
+	height: 190px;
+	/* border-spacing:7px; */
+}
+.under{
+	position: fixed; /* 错位*/
+	left: 0px; 
+	bottom: 30px; 
+	width: 100%; 
+	text-align:center;
+	font-size: 15px;
+}
+.Time{
+	top: 65%;
+	left: 62%;
+	position: fixed; 
+	width: 400px;
+	text-align:right;
+}
+.TEXT{
+	height:65%;
+	width: 200px;
+}
+.TEXT2{
+	height: 50%;
+	width: 80px;
+	margin-left: auto;
+	margin-left: 50pxz;
+}
+a {
+	text-decoration: none
+}	/* 去超链接下划线 */

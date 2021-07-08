@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>版本信息</title>
+  <link rel="stylesheet" href="../css/layui.css"  media="all">
+  <script src="../js/echarts.min.js"></script>
+  <!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
+</head>
+<body>
+	<fieldset class="layui-elem-field layui-field-title" style="margin-top: 10px;">
+	  <legend>信息</legend>
+	</fieldset>   
+		<div style="padding: 20px 30px 10px 30px; background-color: #F2F2F2;">
+		  <div class="layui-row layui-col-space15">
+			<div class="layui-col-md6">
+			  <div class="layui-card">
+				<div class="layui-card-header">城市信息</div>
+				<div class="layui-card-body">
+					<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+						<div id="main1" style="width: 600px;height:400px;"></div>
+				</div>
+			  </div>
+			</div>
+			<div class="layui-col-md6">
+			      <div class="layui-card">
+			        <div class="layui-card-header">周次访问</div>
+			        <div class="layui-card-body">
+			          <div id="main2" style="width: 600px;height:400px;"></div>
+			        </div>
+			      </div>
+			</div>
+		  </div>
+		</div> 
+		<div style="padding: 10px 30px 20px 30px;background-color: #F2F2F2;">
+		  <div class="layui-row layui-col-space15">
+			<div class="layui-col-md6">
+			  <div class="layui-card">
+				<div class="layui-card-header">开销信息</div>
+				<div class="layui-card-body">
+					<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+						<div id="main3" style="width: 600px;height:400px;"></div>
+				</div>
+			  </div>
+			</div>
+			<div class="layui-col-md6">
+			      <div class="layui-card">
+			        <div class="layui-card-header">访问量</div>
+			        <div class="layui-card-body">
+			          <div id="main4" style="width: 600px;height:400px;"></div>
+			        </div>
+			      </div>
+			</div>
+		  </div>
+		</div> 
+		<script type="text/javascript">
+			// 基于准备好的dom，初始化echarts实例
+			var myChart = echarts.init(document.getElementById('main1'));
+
+			// 指定图表的配置项和数据
+			var option = {
+				title: {
+					text: 'ECharts 柱状图'
+				},
+				tooltip: {},
+				legend: {
+					data:['销量']
+				},
+				xAxis: {
+					data: ["山东","沈阳","兰州","长春","浙江","北京"]
+				},
+				yAxis: {},
+				series: [{
+					name: '销量',
+					type: 'bar',
+					data: [5, 20, 36, 10, 10, 20]
+				}]
+			};
+			// 使用刚指定的配置项和数据显示图表。
+			myChart.setOption(option);
+		</script>
+		<script type="text/javascript">
+		    // 基于准备好的dom，初始化echarts实例
+		    var myChart = echarts.init(document.getElementById('main2'));
+				option = {
+					angleAxis: {
+					},
+					radiusAxis: {
+						type: 'category',
+						data: ['周一', '周二', '周三', '周四'],
+						z: 10
+					},
+					polar: {
+					},
+					series: [{
+						type: 'bar',
+						data: [1, 2, 3, 4],
+						coordinateSystem: 'polar',
+						name: 'A',
+						stack: 'a'
+					}, {
+						type: 'bar',
+						data: [2, 4, 6, 8],
+						coordinateSystem: 'polar',
+						name: 'B',
+						stack: 'a'
+					}, {
+						type: 'bar',
+						data: [1, 2, 3, 4],
+						coordinateSystem: 'polar',
+						name: 'C',
+						stack: 'a'
+					}],
+					legend: {
+						show: true,
+						data: ['A', 'B', 'C']
+					}
+				};
+		
+		
+		    // 使用刚指定的配置项和数据显示图表。
+		    myChart.setOption(option);
+		</script>
+		<script type="text/javascript">
+		    // 基于准备好的dom，初始化echarts实例
+		    var myChart = echarts.init(document.getElementById('main3'));
+				option = {
+				    title: {
+				        text: '基础雷达图'
+				    },
+				    tooltip: {},
+				    legend: {
+				        data: ['预算分配（Allocated Budget）', '实际开销（Actual Spending）']
+				    },
+				    radar: {
+				        // shape: 'circle',
+				        name: {
+				            textStyle: {
+				                color: '#fff',
+				                backgroundColor: '#999',
+				                borderRadius: 3,
+				                padding: [3, 5]
+				            }
+				        },
+				        indicator: [
+				            { name: '浙江（sales）', max: 6500},
+				            { name: '北京（Administration）', max: 16000},
+				            { name: '南京（Information Techology）', max: 30000},
+				            { name: '上海（Customer Support）', max: 38000},
+				            { name: '四川（Development）', max: 52000},
+				            { name: '云南（Marketing）', max: 25000}
+				        ]
+				    },
+				    series: [{
+				        name: '预算 vs 开销（Budget vs spending）',
+				        type: 'radar',
+				        // areaStyle: {normal: {}},
+				        data: [
+				            {
+				                value: [4300, 10000, 28000, 35000, 50000, 19000],
+				                name: '预算分配（Allocated Budget）'
+				            },
+				            {
+				                value: [5000, 14000, 28000, 31000, 42000, 21000],
+				                name: '实际开销（Actual Spending）'
+				            }
+				        ]
+				    }]
+				};
+		
+		
+		    // 使用刚指定的配置项和数据显示图表。
+		    myChart.setOption(option);
+		</script>
+		<script type="text/javascript">
+		    // 基于准备好的dom，初始化echarts实例
+		    var myChart = echarts.init(document.getElementById('main4'));
+				option = {
+				    tooltip: {
+				        trigger: 'item',
+				        formatter: '{a} <br/>{b}: {c} ({d}%)'
+				    },
+				    legend: {
+				        orient: 'vertical',
+				        left: 10,
+				        data: ['上海', '大连', '云南', '浙江', '北京', '甘肃', '四川', '广西', '山东', '杭州']
+				    },
+				    series: [
+				        {
+				            name: '访问来源',
+				            type: 'pie',
+				            selectedMode: 'single',
+				            radius: [0, '30%'],
+				
+				            label: {
+				                position: 'inner'
+				            },
+				            labelLine: {
+				                show: false
+				            },
+				            data: [
+				                {value: 335, name: '直达', selected: true},
+				                {value: 679, name: '浙江'},
+				                {value: 1548, name: '搜索引擎'}
+				            ]
+				        },
+				        {
+				            name: '访问来源',
+				            type: 'pie',
+				            radius: ['40%', '55%'],
+				            label: {
+				                formatter: '{a|{a}}{abg|}\n{hr|}\n  {b|{b}：}{c}  {per|{d}%}  ',
+				                backgroundColor: '#eee',
+				                borderColor: '#aaa',
+				                borderWidth: 1,
+				                borderRadius: 4,
+				             
+				                rich: {
+				                    a: {
+				                        color: '#999',
+				                        lineHeight: 22,
+				                        align: 'center'
+				                    },
+				                    
+				                    hr: {
+				                        borderColor: '#aaa',
+				                        width: '100%',
+				                        borderWidth: 0.5,
+				                        height: 0
+				                    },
+				                    b: {
+				                        fontSize: 16,
+				                        lineHeight: 33
+				                    },
+				                    per: {
+				                        color: '#eee',
+				                        backgroundColor: '#334455',
+				                        padding: [2, 4],
+				                        borderRadius: 2
+				                    }
+				                }
+				            },
+				            data: [
+				                {value: 335, name: '浙江'},
+				                {value: 310, name: '大连'},
+				                {value: 234, name: '北京'},
+				                {value: 135, name: '南京'},
+				                {value: 1048, name: '上海'},
+				                {value: 251, name: '广西'},
+				                {value: 147, name: '山东'},
+				                {value: 102, name: '深圳'}
+				            ]
+				        }
+				    ]
+				};
+		    // 使用刚指定的配置项和数据显示图表。
+		    myChart.setOption(option);
+		</script>
+</body>
+</html>

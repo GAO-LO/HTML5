@@ -1,0 +1,21 @@
+<html>
+ <head>
+  <title>HTML</title>
+  <style type="text/css">
+ 
+  </style>
+ </head>
+ <body>
+ <!--setInterval实时显示时间-->
+ <p id="time1" style="color: #ffaa00;"></p>
+ <script>
+     function mytime(){
+         var a = new Date();
+         var b = a.toLocaleTimeString();
+         var c = a.toLocaleDateString();
+         document.getElementById("time1").innerHTML = c;
+         }
+     setInterval(function() {mytime()},1000);
+ </script>
+ </body>
+</html>

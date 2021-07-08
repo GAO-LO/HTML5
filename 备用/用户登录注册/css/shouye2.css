@@ -1,0 +1,101 @@
+#body_div1{
+	background-color: #f5f5f5;
+}
+#body_div2{
+	background-color: #f5f5f5;
+}
+/* logo图设置 */
+#im1{
+	height: 60px;
+	width: 80px;
+}
+#im2,#im3,#im4,#im5{
+	width: 150px;
+	height: 100px;
+}
+#im2>img,#im3>img,#im4>img,#im5>img{
+	width: 50px;
+	height: 50px;
+}
+#p1{
+	font-family: "blackadder itc";
+	font-size: 20px;
+	margin: 0px;
+	padding: 0px;
+}
+#p2{
+	font-family:"arial rounded mt bold";
+	font-size: 25px;
+	margin: 0px;
+	padding: 0px;
+}
+#im2{
+	float: right;
+	margin-right: 15px;
+}
+#div01{
+	padding-top: 10px;
+	height: 70px;
+}
+.form-group>input{
+	border-radius: 6px;
+	width: 270px;
+	height: 35px;
+}
+/* 字体微软雅黑 */
+#p4{
+	padding-top: 40px;
+	font-family: "microsoft yahei";
+}
+#p4>span{
+	padding: 3px 35px;
+	border: #000000 3px solid;
+	border-radius: 10px;/* 图片圆角 */
+}
+#hr2{
+	margin-top: 70px;
+}
+#im6{
+	height: 150px;
+	width: 150px;
+}
+/* 为类选择器 */
+#im6:hover{
+	transform: rotate(0deg) scale(1.4);/* 旋转角度缩放比例 rotate旋转角度 scale缩放倍数*/
+	z-index: 1;/* 设置显示的优先级，只能用在定位元素 */
+	transition: 2.0s;/* 设置显示的加载时间 */
+}
+#body_d2{
+	margin-top: 30px;
+	margin-bottom: 60px;
+}
+#body_d1{
+	padding: 35px 0px 0px 0px; /* 上为35，左右为0*/
+}
+/* 脚本样式 */
+#foot_div1{
+	margin-top: 0px;
+	height: 140px;
+	
+}
+#im10{
+	width: 100px;
+	height: 100px;
+	margin-top: 20px;
+}
+
+#foot_img{
+	height: 100px;
+	width: 100px;
+	margin-top: 20px;
+	float: right;
+}
+#foot_h5{
+	margin-top: 40px;
+	font-weight: 900;
+}
+#foot_h5>a,h6>a{
+	text-decoration: none;/* 去除超链接下划线 */
+	color: #000000;
+	
+}

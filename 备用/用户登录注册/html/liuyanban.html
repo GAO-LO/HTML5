@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>留言板</title>
+  <link rel="stylesheet" href="../css/layui.css"  media="all">
+  <script src="../layui.js" charset="utf-8"></script>
+</head>
+
+<body>
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+  <legend>
+	  <b>用户留言版</b>
+  </legend>
+</fieldset>   
+  <div style="padding: 20px; background-color: #F2F2F2;">
+    <div class="layui-row layui-col-space15">
+      <div class="layui-col-md6">
+        <div class="layui-card">
+          <div class="layui-card-header">张三</div>
+          <div class="layui-card-body">
+			<p id="time1" style="color: #ffaa00;"></p>
+            快递速度很快啊，猫咪不错！非常喜欢价格也实惠，非常满意的一次购物。
+          </div>
+		  <ul>
+			<li>
+				<div style="width: 200px;float: right;">
+					<button type="button" class="layui-btn layui-btn-warm layui-btn-radius layui-btn-sm">提交</button>
+					<button type="button" class="layui-btn layui-btn-danger layui-btn-radius layui-btn-sm">删除</button>
+				</div>
+			</li>
+		    <li style="width: 200px;"><div id="test12"></div></li>
+		  </ul>
+        </div>
+      </div>
+      <div class="layui-col-md6">
+        <div class="layui-card">
+          <div class="layui-card-header">李四</div>
+          <div class="layui-card-body">
+			<p style="color: #ffaa00;">2020/12/1</p>
+            商品很好，万分感谢，下次再购
+          </div>
+		  <ul>
+			  <li>
+			  	<div style="width: 200px;float: right;">
+			  		<button type="button" class="layui-btn layui-btn-warm layui-btn-radius layui-btn-sm" >提交</button>
+			  		<button type="button" class="layui-btn layui-btn-danger layui-btn-radius layui-btn-sm">删除</button>
+			  	</div>
+			  </li>
+		    <li><div id="test13"></div></li>
+		  </ul>
+        </div>
+      </div>
+    </div>
+  </div> 
+	<div style="padding: 20px; background-color: #F2F2F2;">
+	  <div class="layui-row layui-col-space15">
+	    <div class="layui-col-md6">
+	      <div class="layui-card">
+	        <div class="layui-card-header">王五</div>
+	        <div class="layui-card-body">
+				<p style="color: #ffaa00;">2020/10/25</p>
+	          快递速度很快啊，猫咪不错！非常喜欢价格也实惠，非常满意的一次购物。下次继续购买！
+	        </div>
+			  <ul>
+				<li>
+					<div style="width: 200px;float: right;">
+						<button type="button" class="layui-btn layui-btn-warm layui-btn-radius layui-btn-sm">提交</button>
+						<button type="button" class="layui-btn layui-btn-danger layui-btn-radius layui-btn-sm">删除</button>
+					</div>
+				</li>
+			    <li style="width: 200px;"><div id="test15"></div></li>
+			  </ul>
+	      </div>
+	    </div>
+	    <div class="layui-col-md6">
+	      <div class="layui-card">
+	        <div class="layui-card-header">钱六</div>
+	        <div class="layui-card-body">
+			   <p style="color: #ffaa00;">2020/11/25</p>
+	          小猫很可爱，非常喜欢
+	        </div>
+			  <ul>
+				  <li>
+				  	<div style="width: 200px;float: right;">
+				  		<button type="button" class="layui-btn layui-btn-warm layui-btn-radius layui-btn-sm" >提交</button>
+				  		<button type="button" class="layui-btn layui-btn-danger layui-btn-radius layui-btn-sm">删除</button>
+				  	</div>
+				  </li>
+			    <li><div id="test14"></div></li>
+			  </ul>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+<script>
+layui.use(['rate'], function(){
+  var rate = layui.rate;
+  rate.render({
+    elem: '#test12'
+    ,value: 3.5
+    ,half: true
+    ,theme: '#ffbf1e'
+  })
+  var rate = layui.rate;
+  rate.render({
+    elem: '#test13'
+    ,value: 2.5
+    ,half: true
+    ,theme: '#ffbf1e'
+  })
+  var rate = layui.rate;
+  rate.render({
+    elem: '#test14'
+    ,value: 1
+    ,half: true
+    ,theme: '#ffbf1e'
+  })
+  var rate = layui.rate;
+  rate.render({
+    elem: '#test15'
+    ,value: 5
+    ,half: true
+    ,theme: '#ffbf1e'
+  })
+});
+</script>
+
+ <!--setInterval实时显示时间-->
+ <script>
+     function mytime1(){
+         var a = new Date();
+         var b = a.toLocaleTimeString();
+         var c = a.toLocaleDateString();
+         document.getElementById("time1").innerHTML = c;
+         }
+     setInterval(function() {mytime1()},1000);
+ </script>
+</body>
+</html>

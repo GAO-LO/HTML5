@@ -1,0 +1,47 @@
+body{
+	background-image:url(../img/wangye.png);
+	background-size:100%;/* 背景图片大小100% */
+}
+.head_div1{
+	height: 100px;
+}
+.body_div1{
+	height: 560px;
+}
+table{
+	margin-left: 25px;
+}
+tr{
+	height: 30px;
+}
+#us,#ps{
+	height: 25px;
+}
+#us{
+	margin-top: 15px;
+}
+#ps{
+	margin-top: 15px;
+}
+#log{
+	margin-top: 25px;
+}
+.TEXT{
+	float: right;
+}
+#us,#ps,#log{
+	border-radius: 8px;/* 圆角 */
+}
+#body_d1{
+	border: #ffffff 4px solid;/* 边框5px 实线 */
+	border-radius: 20px;/* 圆角 */
+	height: 300px;
+	width: 300px;
+	float: right;
+	margin-top: 250px;
+	margin-right:320px;
+	box-shadow:11px 11px 11px rgba(50,50,50,1);	///边框阴影
+}
+.toot_div1{
+	height: 290px;
+}

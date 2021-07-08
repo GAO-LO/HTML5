@@ -1,0 +1,29 @@
+{
+  "code": 0
+  ,"msg": ""
+  ,"count": 3000000
+  ,"data": 
+  [{
+    "id": "10003"
+    ,"username": "张三"
+    ,"email": "xianxin@layui.com"
+    ,"sex": "男"
+    ,"city": "浙江杭州"
+    ,"sign": "人生恰似一场修行"
+    ,"experience": "65"
+    ,"ip": "192.168.0.8"
+    ,"logins": "106"
+    ,"joinTime": "2016-10-14"
+  }, {
+    "id": "10004"
+    ,"username": "李四"
+    ,"email": "xianxin@layui.com"
+    ,"sex": "女"
+    ,"city": "浙江杭州"
+    ,"sign": "人生恰似一场修行"
+    ,"experience": "666"
+    ,"ip": "192.168.0.8"
+    ,"logins": "106"
+    ,"joinTime": "2016-10-14"
+  }]
+}  
