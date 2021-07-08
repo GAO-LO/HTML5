@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery事件机制</title>
+		<script src="js/jquery-1.9.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			function testThing(){
+				// js动态添加事件
+				var btn = document.getElementById("btn");
+				//添加事件
+				btn.onclick = function(){
+					alert("我是js方式添加的事件");
+				}
+			}
+			// jQuery动态添加事件
+			function testBind(){
+				$("#btn2").bind("click",function(){
+					alert("我是bind绑定事件");
+				});
+			}
+			// jQuery动态解绑事件
+			function testUnBind(){
+				$("#btn2").unbind("click");
+			}
+			// jQuery动态解绑事件
+			function testOne(){
+				// 当所有段落被第一次点击的时候，显示所有其文本。
+				$("#btn3").one("click",function(){
+					alert("我是one方式");
+				});
+				$("#btn3").one("click",function(){
+					alert("我是one方式2");
+				});
+			}
+			// 页面载入事件
+			window.onload=function(){
+				alert("js");
+			}
+			window.onload=function(){//只执行2
+				alert("js2");
+			}
+			
+			//jQuery方式
+			$(document).ready(function(){
+				alert("jQuery");
+			});
+			$(document).ready(function(){ 
+				alert("jQuery2");
+			});
+		</script>
+	</head>
+	<body>
+		<h1>jQuery事件机制</h1>
+		<hr >
+		<input type="button" value="测试js动态事件" onclick="testThing()"/>
+		<input type="button" value="测试jQuery动态添加事件" onclick="testBind()"/>
+		<input type="button" value="测试jQuery动态解绑事件" onclick="testUnBind()"/>
+		<input type="button" value="测试jQuery动态绑定事件" onclick="testOne()"/>
+		<hr >
+		<input type="button" value="测试js" id="btn"/>
+		<input type="button" value="测试jQuery-bind" id="btn2"/>
+		<input type="button" value="测试jQuery-one" id="btn3"/>
+	</body>
+</html>

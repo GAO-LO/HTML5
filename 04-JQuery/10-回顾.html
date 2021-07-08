@@ -1,0 +1,99 @@
+ jQuery是js框架，可以写的更少做的更多。
+ 引入方式，<script src="js/jquery-1.9.1.js" type="text/javascript"></script>
+	var jq = $(xx)
+	var js = jq[0]
+1.选择器
+	基本选择器 div、#id、.class、*、div,#id,.class
+	层级选择器：
+		div span：div里面所有的span标签
+		div>span：div里面所有的子元素span标签
+		div~span:div的弟弟们span
+		div+span：div的弟弟元素span
+		.prevAll()：哥哥们
+		.prev()：哥哥
+		.nextAll()：所有的弟弟们
+		.next()：弟弟
+		.siblings()：兄弟们         .siblings("#div")兄弟里面找特定的id为div的
+		.children()：儿子们
+		.parent()：父元素
+		.parents()：所有的父元素
+	内容选择器：
+		div：empty 空的div
+		div：parent 非空的div
+		div：has(span) 包含span子元素的div
+		div：contains("xx") 包含xx文本的div
+	可见性选择器：
+		div：hidden 所有隐藏的div
+		div：show 所有显示div
+		div:hide()
+		div:show()
+		div:toggle() 显示隐藏切换
+	属性选择器：
+		div[id] 包含id属性的div
+		div[id='xx'] 包含id属性值为xx的
+		div[id！='xx'] 不包含id属性值为xx的
+	子元素选择器：
+		div:first-child
+		div:last-child
+		div:nth-child(n) 第n个div子元素
+		div:lt(n)
+		div:gt(n)
+		div:only-child
+	表单选择器
+		:input
+		:password 密码
+		:radio 单选 
+		:checkbox 复选框
+	表单对象属性
+		:checked 选中的被选中的单选框多选框
+		:selected 选中被选中的下拉选
+		:disabled 不可用
+		:enabled 可用
+2.创建元素对象
+		var d = $("<div></div>")
+3.添加
+		父元素.append(新元素)   最后面
+		父元素.prepend(新元素)  最前面
+		元素.before(新元素)   前面 外部插入
+		元素.after(新元素)    后面 外部插入
+4.删除
+		元素.remove()
+5.获取和修改元素内容
+		js：div.innerHTML = 
+		jq：div.html()
+			div.html("")    修改可以识别标签
+			div.text()
+			div.text("13")  不可以识别标签
+6.获取和修改属性
+		js：div.class = ？
+		jq：.attr("属性")            获取
+			.attr("属性","值")       修改
+7.获取和修改样式
+		js：通过操作style class属性修改元素样式
+		jq：.css("样式名")
+			.css("样式名","样式值")
+			.css({"样式名0":"样式值0","样式名1":"样式值1"})
+8.jQuery事件
+		鼠标事件
+			click（单击）  dbclick（双击）
+			mouseout（移除）  mouseover（移入）
+		键盘事件
+			keydown（键盘按下）   keyup（键盘弹起）
+		状态改变事件
+			change（值改变事件）
+			submit（表单提交事件）
+			focus biur（获得/失去焦点事件）
+			ready
+			$(function(){xxxx........}) 页面加载完成（可以多次）
+		$("input").trigger("click")-->模拟按钮单击事件
+9.jQuery动画
+		隐藏显示 hide() show()
+		上滑下滑 slideUp() slideDown(function(){},3000)
+		淡入淡出 fadeIn() fadeOut()
+		自定义动画 animate(params,[speed],[easing],[fn])
+		
+		
+		
+	
+	
+ 

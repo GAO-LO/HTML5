@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery动画</title>
+		<script src="js/jquery-1.9.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			function test(){
+				$("#div01").show(5000);//毫秒值
+				$("#div02").hide(5000);
+				// $("#div01").hide(5000);//毫秒值
+				// $("#div02").show(5000);
+				$("#div01").toggle(5000);
+				$("#div01").slideDown(5000);
+				$("#div01").slideUp(3000);
+				$("#div01").fadeOut(5000);
+				$("#div01").fadeIn(5000);
+			}
+		</script>
+		<style type="text/css">
+			#div01{
+				height: 300px;
+				background-color: #ffaaff;
+				display: none;
+			}
+			#div02{
+				height: 300px;
+				background-color: #aaffff;
+				
+			}
+		</style>
+	</head>
+	<body onload="test()">
+		<h1>jQuery动画</h1>
+		<hr >
+		<div id="div01">
+			
+		</div>
+		<div id="div02">
+			
+		</div>
+	</body>
+</html>

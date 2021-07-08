@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<script src="js/jquery-1.9.1.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+				//给btn添加单击事件
+				$("input[value = '添加']").click(function(){
+					//创建5个<td></td>
+					var nameTd = $("<td></td>");
+					var ageTd = $("<td></td>");
+					var salaryTd = $("<td></td>");
+					var deptTd = $("<td></td>");
+					var delTd = $("<td></td>");
+					var delInp = $("<input type = 'button' value = '删除' />");
+					delInp.click(function(){
+						$(this).parent().parent().remove();
+					});
+					delTd.append(delInp);
+					//给td添加文本内容
+					nameTd.text($("input:eq(0)").val());
+					ageTd.text($("input:eq(1)").val());
+					salaryTd.text($("input:eq(2)").val());
+					deptTd.text($("input:eq(3)").val());
+					//把td添加到tr中
+					var tr = $("<tr></tr>");
+					tr.append(nameTd);
+					tr.append(ageTd);
+					tr.append(salaryTd);
+					tr.append(deptTd);
+					tr.append(delTd);
+					//把tr添加到table中
+					$("table").append(tr);
+				})
+			})
+	</script>
+	<body>	
+		<input type="text" id="showdiv" placeholder="姓名" />
+		<input type="text" id="showdiv" placeholder="年龄" />
+		<input type="text" id="showdiv" placeholder="工资" />
+		<input type="text" id="showdiv" placeholder="部门" />
+		<input type="button" value="添加"/>
+		<br>
+		<table>
+			<caption>员工表</caption>
+			<tr>
+				<td>姓名</td>
+				<td>年龄</td>
+				<td>工资</td>
+				<td>部门</td>
+				<td>操作</td>
+			</tr>
+			<tr>
+				<td>张三</td>
+				<td>23</td>
+				<td>5000</td>
+				<td>后勤</td>
+				<td><input type="button" value="删除"/></td>
+			</tr>
+		</table>
+	</body>
+</html>

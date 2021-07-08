@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>练习操作表格</title>
+		<script src="js/jquery-1.9.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				// 给按钮绑定时间
+				$("#btn1").click(function(){
+					$("input[type='checkbox']").prop("checked",true);
+				}); 
+				// 实现全不选
+				$("#btn2").click(function(){
+					$("input[type='checkbox']").prop("checked",false);
+				}); 
+				// 反选
+				$("#btn3").click(function(){
+					 var cks=$("input[type='checkbox']");
+					/*for(var i=0;i<cks.length;i++){
+						cks[i].checked = !cks[i].checked;
+					} */
+					
+					cks.each(function(){
+						$(this).prop("checked",!$(this).prop("checked"));
+					});
+				});
+				// 选择到奇数行
+				$("#btn4").click(function(){
+					$("input[type='checkbox']:even").prop("checked",true);
+					$("input[type='checkbox']:odd").prop("checked",false);
+				});
+				// 隔行变色
+				$("#btn5").click(function(){
+					$("tr:even").css({ background: "#aaaaff"});
+					$("tr:odd").css({ background: "#ffaa7f"});
+				});
+				// 删除选中行
+				$("#btn6").click(function(){
+					// $("input:checked").parents("tr").remove();
+					// $("input[checked='true']").parents("tr").remove();
+					 $(":checkbox:checked").parents("tr").remove();
+				});
+				$("#btn7").click(function(){
+					// 外部插入
+					// $("tr:first").after("<tr><td><input type='checkbox' name='ckx' id='ckx'/></td><td>1</td><td>2</td><td>3</td><td>4</td></tr>");
+					// 内部插入
+					// $("table").append("<tr><td><input type='checkbox' name='ckx' id='ckx'/></td><td>1</td><td>2</td><td>3</td><td>4</td></tr>");
+					var td1 = $("<td><input type='checkbox' name='ckx' id='ckx'/></td>");
+					var td2 = $("<td>2</td>");
+					var td3 = $("<td>3</td>");
+					var td4 = $("<td>4</td>");
+					var td5 = $("<td>5</td>");
+					var tr = $("<tr bgcolor='green'></tr>");
+					// 修改td3内容
+					td3.text("中秋快乐");
+					td2.text("修改td2");
+					// td加到tr中
+					tr.append(td1);
+					tr.append(td2);
+					tr.append(td3);
+					tr.append(td4);
+					tr.append(td5);
+					// 把tr加到table
+					$("table").append(tr);
+					
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h1>练习操作表格</h1>
+		<hr >
+		<input type="button" id="btn1" value="全选" />
+		<input type="button" id="btn2" value="全不选" />
+		<input type="button" id="btn3" value="反选" />
+		<input type="button" id="btn4" value="选择奇数行"/>
+		<input type="button" id="btn5" value="隔行变色" />
+		<input type="button" id="btn6" value="删除行"/>
+		<input type="button" id="btn7" value="添加行" />
+		<table border="1px" cellspacing="0" >
+			<tr>
+				<td>
+					<input type="checkbox" name="ckx" id="ckx" />
+				</td>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="checkbox" name="ckx" id="ckx"/>
+				</td>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="checkbox" name="ckx" id="ckx"/>
+				</td>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="checkbox" name="ckx" id="ckx"/>
+				</td>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+			</tr>
+		</table>
+	</body>
+</html>

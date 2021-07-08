@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		1.什么是jQuery
+			全程JavaScript jQuery是一个js框架，本质上仍是js
+		2.特点：
+			支持各种主流的浏览器
+			writer less，do more
+			使用上简单
+		3.使用：
+			引入jQuery文件
+			jQuery选择器
+				$("#id选择器")
+				$("标签名")
+				$(".class属性值")
+				$("prev+next")，同级元素紧跟在后面的元素
+				$("prev~sibling")，同级元素紧跟在后面所有的元素
+				$("sibling1 sibling2")后代
+				$("sibling1>sibling2")
+				$(".class属性值:eq(0)")
+				$("td[height]")
+			jQuery操作元素的属性
+				元素对象名.attr("属性名")
+				元素对象名.attr("属性名"，"属性值")
+				元素对象名.attr()
+			jQuery操作元素的内容
+				元素对象名.html()
+				元素对象名.text()
+				元素对象名.html(元素对象名.html+"xx")
+				元素对象名.text("xx")
+			jQuery操作元素的样式
+				元素对象名.css("样式名","样式值")
+				元素对象名.css({"样式名":"样式值","样式名1":"样式值1",.....})
+				元素对象名.addClass("class属性值")
+				元素对象名.removeClass("class属性值")
+			jQuery操作文档结构
+			jQuery中的事件
+			jQuery中的动画效果
+		jQuery选择器
+			id、类、标签、组合、层级、子元素选择器、、、
+			表单、属性...
+			基本选择器
+				$("#id属性值")
+				$("标签名")
+				$(".class属性值")
+				$("*")
+			层级选择器
+				$("prev + next")//同级元素紧跟在后面的元素
+				$("prev~sibling")，同级元素紧跟在后面所有的元素
+				$("sibling1 sibling2")后代
+				$("sibling1>sibling2")
+			过滤选择器
+				$(".class属性值:eq(0)")
+				$("td[height]")
+				div:first
+				div:last
+				div:even
+				div:odd
+				div:lt(n)小于n的标签
+				div:gt(n)大于n的标签
+				div:eq(n)等于n的标签
+			内容选择器
+			可见性选择器
+				div：hidden 匹配所有隐藏的div
+				div：visible 匹配所有显示的div
+				.show()显示
+				.hide()隐藏
+				.toggle()显示隐藏切换
+			属性选择器
+				$("td[height]")
+					...
+				子元素选择器
+					div:first-child 第一个div子元素
+					div:last-child
+					div:nth-child(n) 第n个子元素
+				表单选择器
+					:input
+					:password
+				表单对象属性：
+					:checked
+					:disabled 
+			jQuery操作元素的属性
+				元素对象名.attr("属性名")
+				元素对象名.attr("属性名","属性值")
+				元素对象名.val()
+			jQuery操作元素的内容
+				元素对象名.html()
+				元素对象名.text()
+				元素对象名.html(元素对象名.html+"xx")
+				元素对象名.text("xx")
+			jQuery操作元素的样式
+				元素对象名.css("样式名","样式值")
+				元素对象名.css({"样式名":"样式值","样式名1":"样式值1",...})
+				元素对象名.addClass("class属性值")
+				元素对象名.removeClass("class属性值")
+		jQuery选择器:
+			id、类、标签、组合、层级、子元素选择器....
+			表单、属性。。。
+		注意：
+			jQuery中选择器获取的是存储类HTML元素的数组
+			jQuery获取元素对象不能直接使用js内容按照数组的取出方式对对象取出后，可以使用js内容
+	</body>
+</html>
