@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>11</title>
+		<link rel="stylesheet" type="text/css" href="css/goshopping.css"/>
+		<script src="js/goshopping.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<!-- 购物车列表 -->
+		<div id="car" class="car">
+			<div class="head_row hid">
+				<div class="check left"> <i onclick="checkAll()">√</i></div>
+				<div class="img left">&nbsp;&nbsp;全选</div>
+				<div class="name left">商品名称</div>
+				<div class="price left">单价</div>
+				<div class="number left">数量</div>
+				<div class="subtotal left">小计</div>
+				<div class="ctrl left">操作</div>
+			</div>
+		</div>
+		<!-- 结算框 -->
+		<div id="sum_area">
+			<div id="pay">去结算</div>
+			<div id="pay_amout">合计：<span id="price_num">0</span>元</div>
+		</div>
+		<!-- 列表盒子 -->
+		<div id="box">
+			<h2 class="box_head"><span>买购物车中商品的人还买了</span></h2>
+			<ul>
+			</ul>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,98 @@
+header{
+	height: 104px;
+}
+.div1{
+	float: left;
+}
+.div_u1>li{
+	float: left;
+}
+#l1{
+	margin-left: 20px;
+	list-style-type: none;
+	margin-top: 20px;
+}
+li>a{
+	text-decoration: none;
+	color: #000000;
+}
+.div2{
+	float: left;
+	float: right;
+}
+.div_u2>li{
+	float: right;
+	margin-top: 0;
+}
+.tbody_d2{
+	height :450px;
+		/* border: #ff0000 1px dashed; */
+}
+.tbody_d2>div{
+}
+.login>a{
+	color: #ffffff;
+	background-color: #ff9721;
+}
+.div3{
+	width: 440px;
+	height: 140px;
+	margin: 200px auto 0 auto;/* 上200下0，左右居中 */
+}
+.div4{
+	width: 880px;
+	height: 60px;
+	margin: 40px auto 0 auto;
+		/* border: #ff0000 1px dashed; */
+}
+.div4>input{
+	margin: 0 auto;
+}
+#input1{
+	float: left;
+	width: 750px;
+	height: 42px;
+}
+#input2{
+	float: left;
+	width: 99px;
+	height: 47px;
+}
+footer{
+	height: 280px;
+	/* border: #000000 1px dashed; */
+}
+footer .footer_d3{
+	width: 710px;
+	height: 240px;
+	margin: auto;
+}
+#p1{
+	width: 124px;
+	height: 124px;
+	margin: auto;
+}
+#p2{
+	width: 177px;
+	height: 22;
+	font-size: 20px;
+	margin-left:290px;
+}
+#p3,#p4,#p5,#p6{
+	font-size: 12px;
+	height: 22px;
+	color: #5b5552;
+	margin: auto;
+}
+#p3{
+	width: 230px;
+	margin: auto;
+}
+#p4{
+	width: 520px;
+	margin: auto;
+}
+#p5{
+	width: 590px;
+	margin: auto;
+}
