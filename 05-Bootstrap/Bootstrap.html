@@ -1,0 +1,103 @@
+1.如何编写响应式网页？
+什么是响应式网页？
+	自适应网页，一个页面可以根据浏览器的设备不同自动的修改页面布局，图片大小 文字大小，从而保证所有的设备上下都有正常的浏览体验
+	好处：可以在各种设备下正常浏览
+	不足：页面的代码结构需要考虑到各种设备，编写难度较大，一般只适用页面量不太多的页面。
+如何测试响应式网页？
+	使用真实的物理设备测试---测试效果最好但是最麻烦
+	使用第三方模拟器软件测试---测试效果一般
+	使用浏览器提供的设备模拟器---最简单，有时测试效果与真实的设备有所不同需要进一步验证
+如何编写一个响应式网页？
+	viewport:视口，屏幕中浏览网页的窗口，可以随意指定宽度和高度。不能够太小，但是不能够小于物理屏幕，只有移动端浏览器才有此概念
+			 承载网页窗口。可以让任意大小的网页不经过缩放，直接显示
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
+	文字大小尽量使用相对的尺寸
+		尽量避免使用绝对尺寸：font-size:12px;
+		适用相对尺寸来代替：font-size；0.8rem;(1em)  root
+	图片尽量使用相对尺寸
+		绝对：width:200px;
+		相对：width:50%; 指定在父容器中的宽度占比，可以随着父容器无限变大
+			  max-width:50%; 指定在父容器中的宽度占比，最大不能超过自己
+	页面布局尽量采用流式布局()
+		float:left 或 display:inline-block;
+	响应式网页必须使用CSS3 Media Query技术。
+	CSS3 Media Query
+		Media：浏览手机的设备
+			screen(pc/phone/pad) tv print(打印)
+		Query：使用css自动查询出浏览设备的特性，如宽度、高度、水平竖直
+		根据浏览网页设备的不同，有选择执行某些css，放弃执行其他的css样式
+	媒体查询的两种方法
+		1.有选择的执行符和条件的外部css文件
+			<link media="screen and (min-width:768px) and (max-width:991px)" href="css/pad.css" rel="stylesheet"/>
+		2.有选择的执行css片段中的部分内容
+			<link rel="stylesheet" type="text/css" href="css/ceshi.css"/>
+			@media screen and (max-width:767px){
+				h1{display: none;}
+			}
+			
+响应式网页
+	（1）声明viewport
+	（2）容器尽量使用相对尺寸
+	（3）文字 图片等尽力量使用相对尺寸
+	（4）页面使用流式布局
+	（5）使用css3 Media Query
+Bootstrap是---HTML/css/js框架，适用于响应式web页面开发
+	（1）起步
+			下载、基础模板、实例、兼容性
+	（2）全局的css样式
+			按钮
+				.btn
+				.btn-defauit
+				.btn-danger/warning/success/info/primary
+				.btn-xs/sm/默认/lg
+				.btn-block
+			图片
+				.img-rounded/circle/thumbnail/responsive
+			列表
+				.list-unstyled
+				.list-inline
+			文本
+				.text-五种颜色
+				.bg-五种颜色
+				.text-left/right/center/justify
+				.text-uppercase/lowercase/capitalize
+			表格
+				.table
+				.table-bordered/striped/hover
+				.table-responsive --响应式表格
+栅格布局系统
+	页面布局的三种方式
+		table布局
+			简单容易控制
+			容易出现语义错误、渲染效率低
+		div+css布局
+			语义正确，渲染效率高
+			不容易控制
+		Bootstrap栅格布局系统
+			语义正确，渲染效率高，简单容易控制，实现响应式
+	
+Bootstrap栅格布局系统：
+	（1）栅格系统的父元素必须是：
+		div.container 			定宽容器
+			LG：1170px 			1200px
+			MD：970px 			992px-1199px
+			SM：750px 			768px-991px
+			XS：100% 			767px
+		div.container-fluid 	变宽容器
+			width:100%
+	（2）在容器中声明“行”
+		div.container > div.row
+	（3）在“行”中声明“列”
+		div.container > div.row > div.col-*-*
+	（4）根据不同的屏幕尺寸分为四组：
+		.col-lg-*
+		.col-md-*
+		.col-sm-*
+		.col-xs-*
+	（6）一行均分为12等份，没个列必须指定自己的占比
+		.col-lg-1
+		.col-lg-2
+		...
+		.col-lg-12
+		
+		.col-md-offset-6   偏移量

@@ -1,0 +1,32 @@
+body{
+	font-size: 20px;
+	margin: 0;
+	padding: 0;
+}
+@media screen and (min-width:992px){
+	body{
+		background-color: #55aaff;
+		color: #aa0000;
+	}
+	h1{
+		font-size: 3em;
+	}
+}
+@media screen and (min-width:768px) and (max-width:991px){/* 注意and和（）分开 */
+	body{
+		background-color: #55aa7f;
+		color: #00007f;
+	}
+	h1{
+		font-size: 1em;
+	}
+}
+@media screen and (max-width:767px){
+	body{
+		background-color: #ffaa7f;
+		color: #005500;
+	}
+	h1{
+		display: none;
+	}
+}
