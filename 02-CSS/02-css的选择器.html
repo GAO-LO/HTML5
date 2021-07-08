@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>css选择器</title>
+		<!-- 内部声明css代码域 -->
+		<style>
+			/* 任意元素选择器（全部选择器） */
+			/* *{
+				padding: 20;
+				margin: 10;
+				color: blue;
+			} */
+			/* 标签选择器 */
+			table{	
+				
+				border: #FF0000 2px solid;		/* solid：实线 */
+				width: 300px;
+				height: 100px;
+				background-color: aquamarine;
+			}
+			/* id选择器 */
+			#u{
+				background-color:yellow
+			}
+			/* 类选择器 */
+			.commom{
+				color: #FF0000;
+			}
+			/* 子孙后代选择器 */
+			.commom a{
+				color: #00FFFF;
+			}
+			/* 组合选择器 */
+			table,#u,p{
+				background-color: cornsilk;
+			}
+			/* 子元素选择器 */
+			.commom>a{
+				color: fuchsia;
+			}
+			/* 属性选择器 */
+			input[type=text]{
+				background-color: mediumslateblue;
+			}
+			/* 伪类选择器 */
+			/* 未访问状态 */
+			a:link{
+				color: black;
+			}
+			/* 悬停状态 */
+			a:hover{
+				color: deeppink;
+			}
+			/* 点击状态 */
+			a:active{
+				color: darkgray;
+			}
+			/* 访问过的状态 */
+			a:visited{
+				color: rgb(255, 85, 0);
+			}
+		</style>
+	</head>
+	<body>
+		<h3 class="commom">CSS的选择器</h3>
+		<hr />
+		<table>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>4</td>
+			</tr>
+		</table>
+		<b class="commom">css学习</b>
+		<p class="commom">
+			<a href="http://www.baidu.com">学习</a>
+			<span><a href="">CSS层叠样式表</a></span><!-- 行内分区 -->
+		</p>
+		<table>
+			<tr>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+		<ul id="u">
+			<li>1</li>
+			<li>4</li>
+			<li>7</li>
+		</ul id="l"><ul>
+			<li>8</li>
+			<li>5</li>
+			<li>2</li>
+		</ul>
+		<input type="text" />
+		<input type="password" /><br>
+		<a href="01-CSS的学习.html">超链接标签1</a>
+		<a href="02-CSS的学习.html">超链接标签2</a>
+		<a href="03-CSS的学习.html">超链接标签3</a>
+	</body>
+</html>
+<!-- 
+css选择器的使用过程：
+	1.声明css代码域
+	2.使用选择器选择要添加的样式标签
+	3.给对应的标签加样式
+css选择器：
+	标签选择器：
+		标签名{样式1：样式值；...}
+		作用：会给当前页面内所有的相同的标签加样式
+	id选择器：
+		#标签属性id值{样式1：样式值；...}
+		作用：会给某个特定的标签加指定样式
+	类选择器：
+		.标签的class属性值{样式1：样式值；...}
+		作用：会给不同标签加相同样式
+	后代选择器：
+		选择器1 空格 选择器2{样式1：样式值；...}
+		作用：会给给选择器1下所有的选择器2加样式
+	组合选择器：
+		选择器1，选择器2，选择器3{样式1：样式值；...}
+		作用：给不同的选择器加相同的样式
+	子标签选择器：
+		选择器1>选择器2{样式1：样式值；...}
+		作用：给选择器1的直接子标签加样式
+	属性选择器：
+		标签名[属性名=属性值]{样式1：样式值；...}
+		作用：选择某标签指定具备某属性并且属性值为某属性的标签
+	任意元素选择器：
+		*{样式1：样式值；...}
+		作用：给页面加基本样式
+		
+ -->

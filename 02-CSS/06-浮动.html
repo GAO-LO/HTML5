@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>浮动</title>
+		<style>
+			body>div{
+				width: 500px;
+				/* height: 500px; */
+				border: solid 1px #0000FF;
+				/* overflow: hidden; */
+			}
+			div div{
+				width: 100px;
+				height: 100px;
+			}
+			#div01{
+				background-color: #0055ff;
+				float: left;
+			}
+			#div02{
+				background-color: #00ff00;
+				/* 禁止两侧出现浮动元素 */
+				float: left;
+			}
+			#div03{
+				background-color: #ffaa00;
+				float: right;
+				/* margin-top: 100px;/* 外边距 */ 
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<div id="div01">1</div>
+			<div id="div02">2</div>
+			<div id="div03">3</div>
+			<div></div>
+		</div>
+	</body>
+</html>
+<!-- 
+ 浮动定位：
+	1.元素会脱离文档流
+	元素从当前的所在行向左或向右浮动，当撞上上级
+	元素的边框或其他的浮动元素时停止。
+	2.元素浮动后一行放不下会自动换行，有可能会卡主
+	3.如果元素的所有子元素全部浮动，则该子元素高度为0
+		也可用元素加overflow：hidden解决
+		也可在元素多加一个div撑起div元素
+ -->

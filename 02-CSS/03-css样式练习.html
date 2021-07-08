@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>css样式练习</title>
+		<!-- 设置图片样式 -->
+		<style>
+			body{
+				background-color: #aaaaff;
+				text-align: center;/* 文本对齐方式 */
+				padding: 50px;/* 上面的内边距 */
+			}
+			img{
+				width: 12%;/* 图片的宽度 */
+				border: #ffffff 5px solid;/* 边框样式 */
+				/* padding: 10px;/* 内边距 */ 
+				margin: 20px;/* 外边距 */
+				transform: rotate(-20deg);/* 设置倾斜角度 */
+				position: relative;/* 相对定位 */
+			}
+			/* 为类选择器 */
+			img:hover{
+				transform: rotate(0deg) scale(1.5);/* 旋转角度缩放比例 */
+				z-index: 1;/* 设置显示的优先级，只能用在定位元素 */
+				transition: 1.5s;/* 设置显示的加载时间 */
+				
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		<img src="img/a1.jpg"  alt=""/>
+		<img src="img/a2.jpg"  alt=""/>
+		<img src="img/a3.jpg"  alt=""/>
+		<img src="img/a4.jpg"  alt=""/><br>
+		<img src="img/a5.jpg"  alt=""/>
+		<img src="img/a6.jpg"  alt=""/>
+		<img src="img/a7.jpg"  alt=""/>
+		<img src="img/a8.jpg"  alt=""/>
+	</body>
+</html>

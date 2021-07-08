@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>盒子模型</title>
+		<!-- 声明css代码域 -->
+		<style>
+			img{
+				width: 49.4%;
+				height: 400px;
+			}
+			#showdiv{
+				width: 40%;
+				border: #aaaa7f 5px solid;
+				margin-bottom: 10px;
+				margin: 0 auto; 			/* 上下为零，左右居中
+				padding: 10px;
+				/* margin-top: 100px; */
+			}
+			#div02{
+				border: #7B68EE 1px dashed;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="showdiv">
+			<img src="img/a.jpg">
+			<img src="img/a.jpg">
+		</div>
+		<div id="div02"></div>
+	</body>
+</html>
+<!-- 
+ 盒子模型=外边距+边框+内边距+内容区域
+	外边距：margin
+		作用：用来设置元素和元素之间的距离
+		margin：0 auto;上下间距为零，左右居中
+	边框：border
+		作用：用来设置边框样式大小
+	内边距：padding
+		作用：设置内容区域和边框之间的距离
+	内容区域：
+		作用：设置内容区域的大小，改变宽度高度即可改变内容区域的大小
+注释：以上三个均可单独设置上下左右的边距的外边距/边框/内边距
+									top bottom left right
+	一个数：上下左右
+	两个数：上下  作用
+	三个数：上  左右  下
+	四个数：上  右  左  下
+ 
+ 
+ -->

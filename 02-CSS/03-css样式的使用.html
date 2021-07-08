@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>css的使用</title>
+		<!-- css代码域 -->
+		<style>
+			.div1{
+				width: 500px;
+				height: 500px;
+				background-color: #00557f;
+				/* 设置背景图片 */
+				background-image: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600921492752&di=fadbded190d3416e324256fb7cc1079a&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201805%2F18%2F20180518134730_vnJXa.thumb.700_0.jpeg");
+				background-size: 200px 200px;		/* 设置背景图片的宽度，高度*/
+				/* 禁止重复 */
+				background-repeat: no-repeat;
+				/* 设置图片平铺 */
+				/* background-size: cover; */
+				/* 设置背景图片的位置top bottom left right center可以写具体的值，也可以写%（x，y） */
+				background-position: top;
+				}
+				ul{
+					height: 50px;
+					background-color: #ffff00;
+					padding: 0;	/* 内边距0 */
+				}
+				li{
+					background-color: #ff5500;
+					/* 去除无序列表前的标识 */
+					list-style-type: none;
+					float: left;/* 设置浮动（左幅） */
+				}
+					/* 去除超链接下划线 */
+				li a{
+					text-decoration: none;
+					color: #000000;/* 设置字体颜色 */
+					font-weight: bold;/* 设置字体加粗 */
+					font-size: 30px;/* 设置字体大小 */
+					margin-left: 30px;
+					line-height: 50px;
+					
+				}
+		</style>
+	</head>
+	<body>
+		<div>页面布局元素,块级元素，默认高度为0，宽度为父元素的100%</div>
+		<span>行内布局元素，无语义标签，行内元素</span>
+		<p>aaaaaaaaaaaaaaaaaaa<span>bbbbbbbb</span>ccccccccccccccc</p>
+		<hr />
+		<h3>css的常用样式</h3>
+		<hr />
+		<div class="div1"></div>
+		<ul>
+			<li><a href="">新闻</a></li>
+			<li><a href="">地图</a></li><br>
+			<li><a href="">学术</a></li>
+			<li><a href="">更多</a></li>
+		</ul>
+	</body>
+</html>

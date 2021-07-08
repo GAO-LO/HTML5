@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+  <title>百度一下，你就知道</title>
+  <style>
+	  
+	  * {
+	  	padding: 0;
+	  	margin: 0;
+	  }
+	   
+	  #nav-b a {
+	  	color: black;
+	  }
+	   
+	  #nav-b a:hover {
+	  	color: blue;
+	  }
+	   
+	  .nav {
+	  	margin-top: 19px;
+	  	margin-bottom: 5px;
+	  	display: inline-block;
+	  	clear: both;
+	  	float: right;
+	  	padding-right: 10px;
+	  }
+	   
+	  .nav-a {
+	  	margin-left: 15px;
+	  	line-height: 24px;
+	  	font-size: 13px;
+	  	color: #666;
+	  	font-weight: bold;
+	  }
+	  .right{
+		  margin-right: 15px;
+	  }
+	   
+	  #zzr {
+	  	display: inline;
+	  	list-style: none;
+	  }
+	   
+	  .nav li ul {
+	  	list-style: none;
+	  	display: none;
+	  	position: relative;
+	  }
+	   
+	  .nav li:hover ul {
+	  	border: 1px solid #ccc;
+	  	color: blue;
+	  	display: block;
+	  	position: absolute;
+	  	right: 60px;
+	  	top: 38px;
+	  }
+	   
+	  .shezhi {
+	  	text-decoration: none;
+	  	font-weight: normal;
+	  	padding-right: 15px;
+	  	margin-left: 15px;
+	  	line-height: 24px;
+	  	font-size: 9px;
+	  	color: #666;
+	  }
+	   
+	  .more {
+	  	margin-left: 15px;
+	  	line-height: 24px;
+	  	font-size: 13px;
+	  	background-color: #38f;
+	  	color: #fff;
+	  	display: inline-block;
+	  	text-align: center;
+	  	text-decoration: none;
+	  	width: 60px;
+	  	border: 5px;
+	  }
+	   
+	  #logo {
+	  	display: block;
+	  	text-align: center;
+	  	padding-top: 80px;
+	  	padding-bottom: 15px;
+	  }
+	   
+	  form {
+	  	width: 700px;
+	  	margin: 0 auto;
+	  }
+	   
+	  input {
+	  	padding: 0 0 0 7px;
+	  	width: 538px;
+	  	height: 33px;
+	  	border: 1px solid #b6b6b6;
+	  	 float:left;
+	  }
+	   
+	  .search_butt {
+	  	width: 100px;
+	  	height: 35px;
+	  	padding-top: 1px;
+	  	padding-bottom: 1px;
+	  	border: 0;
+	  	background-color: #3385ff;
+	  	color: #fff;
+	  	font-size: 15px;
+	  }
+	   
+	  form button:hover {
+	  	cursor: pointer;
+	  }
+	   #id1{
+		   
+	   }
+	  
+  </style>
+</head>
+<body>
+    <div class="nav">
+    	<span id="nav-b">
+      <a href=""class="nav-a">新闻</a>
+      <a href=""class="nav-a">hao123</a>
+      <a href=""class="nav-a">地图</a>
+      <a href=""class="nav-a">视频</a>     
+      <a href=""class="nav-a">贴吧</a>
+      <a href=""class="nav-a">学术</a>
+      <a style="font-weight:normal" href=""class="nav-a">登录</a> </span>
+      <li id="zzr"><span id="nav-b"><a style="font-weight:normal"  href="" class="nav-a">设置</a> </span>
+      <ul>
+        <li><a href="#" class="shezhi">搜索设置</a></li>
+        <li><a href="#" class="shezhi">高级搜索</a></li>
+        <li><a href="#" class="shezhi">关闭预测</a></li>
+        <li><a href="#" class="shezhi">搜索历史</a></li>
+      </ul></li>
+      <a class="more" href="">更多产品</a>
+      </div>       
+     <div id="logo">
+      <img src="a0.png" width="270" height="120">
+      </div>     
+      <form>  
+      		  <input type="text">
+    	<input type="submit" name="send" class="search_butt" value="百度一下" />
+    	     <!--<button type="button">百度一下</button>-->
+    </form>
+	
+	<img src="footer.png" id="id1"/>
+</body>
+</html>

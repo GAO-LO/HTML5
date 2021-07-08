@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>css定位</title>
+		<style>
+			div{
+				width: 500px;
+				height: 800px;
+			}
+			#div01{
+				border: #ff5500 1px solid;
+				position: relative;/* 父级元素加相对定位，自己元素加绝对定位 */
+				
+			}
+			/* 给d1添加样式 */
+			#d1{
+				background-color: #000000;
+				width: 100px;
+				height: 100px;
+				position: absolute;/* 绝对定位 */
+				right: 0;
+				
+				}
+			#div02{
+				border: solid 1px #00557F;
+				position: relative;/* 相对定位 */
+				left: 50px;
+				top: 50px;
+				bottom: 0px;
+				right: 0px;
+			}
+			#div03{
+				border: solid 1px #aa0000;
+				position: relative;
+			}
+			#d2{
+				background-color: #0000FF;
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				right: 50px;
+				bottom: 0;
+			}
+			#div04{
+				width: 100px;
+				height: 100px;
+				position: fixed;
+				border: solid 1px #AA0000;
+				background-color: #55007f;
+				right: 110px;
+				top: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div01">
+			<div id="d1"></div>
+		</div>
+		<div id="div02"></div>
+		<div id="div03">
+			<div id="d2"></div>
+		</div>
+		<div id="div04"></div>
+		<hr>
+		<img src="img/bd_logo.png" usemap="#mymap">
+		<!-- 图片地图 -->
+		<map name="mymap">
+			<area shape="circle" coords="100,100,1" href="http://www.baidu.com"/>
+			<area shape="circle" coords="0,0,540,258" href="http://www.baidu.com"/>
+		</map>
+	</body>
+</html>
+<!-- 
+ 相对定位：relative
+	相对元素原来的位置移动
+		top left right bottom
+	注：其他元素位置不会发生变化
+ 绝对定位：absolute
+	默认情况下参照整个页面进行位置移动
+	若想参照父级元素就需要在父级元素上加相对定位
+ 固定定位：fixed
+	参照整个页面，进行位置移动（脱离文档流）
+	top left right bottom
+ 图片地图： map
+	属性 name--- >与img标签username对应，#name属性值
+	子标签：<area shape="" coords="" href="/>
+	shape：rect circle形状
+	coords：坐标（矩形两对角线点的坐标，圆形圆心坐标和半径）
+	href：资源路径（本地网络都可，能浏览则浏览不能则下载）
+ -->

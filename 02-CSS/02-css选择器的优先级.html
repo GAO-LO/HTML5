@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>css选择器的优先级</title>
+	</head>
+	<!-- 声明css的代码域 -->
+	<style>
+		#p1{
+			color: #FFFF00;
+		}
+		*{
+			color: darkgray;
+		}
+		p{
+			color: #0000FF;
+		}
+		.p1{
+			color: #FF0000;
+		}
+	</style>
+	<body>
+		<p class="p1" id="p1">体会css选择器的优先级</p>
+	</body>
+</html>
+<!-- 
+css选择器的使用过程：
+	1.声明css代码域
+	2.使用选择器选择要添加的样式标签
+		使用*选择器给整个页面加基本样式，
+		使用标签选择器给相同标签加样式
+		使用类选择器给不同标签加相同样式
+		使用id、属性、内联style属性给某个标签添加个性化样式
+	3.给对应的标签加样式
+		
+选择器的优先级：
+	*<标签选择器<类选择器<属性选择器<id选择器<
+	 -->

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>css选择器的练习</title>
+		<!-- 
+			h3-b设置为红色
+			s1 s2 div3文字设置为绿色
+			s5背景紫色
+			s4 s5字体为粉色
+			h3-b s4 s6背景为蓝色
+			-->
+	</head>
+	<style>
+		#h3{
+			color: #FF0000;
+		}
+		.d3{
+			color: #008000;
+		}
+		#s1{
+			background-color: #FF00FF;
+		}
+		.s{
+			background-color: #FFFF00;
+		}
+		#s2,#s1{
+			color: #FF69B4;
+		}
+		#h3,#s2,#s6{
+			background-color: #0000FF;
+		}
+	</style>
+	<body>
+		<h3>h3-a</h3>
+		<h3 id="h3">h3-b</h3>
+		<div>div1</div>
+		<div>div2</div>
+		<div class="d3">div3</div>
+		<span class="d3 s" >s1</span>
+		<span class="d3 s" >s2</span>
+		<span class="s">s3</span>
+		<div >
+			<span id="s2">s4</span>
+			<div><span id="s1">s5</span></div>
+		</div>
+		<div><span id="s6">s6</span></div>
+	</body>
+</html>
