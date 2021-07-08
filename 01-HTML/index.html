@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>锚点</title>
+	</head>
+	<body>
+		<form action="http://www.baidu.com" method="get">
+			<!-- action：提交给服务器的路径,method：提交方式 get post -->
+			<label for="用户名">用户名：</label><input type="text"  name="username" placeholder="请输入用户名" maxlength="5" id="用户名"  size="100"/><br />
+			<label for="密码">密码：</label><input type="password"  name="password" placeholder="请输入密码" id="密码"/><br />
+			单选：<input type="radio" name="sex" value="0" id="nan"/><label for="nan">男</label>
+				 <input type="radio" name="sex" value="1" id="nv"/><label for="nv">女</label><br />
+			多选：<input type="checkbox" name="instere" value="c" checked="checked"/>唱歌<!-- checked默认选择 -->
+			<input type="checkbox" name="instere" value="t"/>跳舞
+			<input type="checkbox" name="instere" value="r"/>看电视
+			<input type="checkbox" name="instere" value="l"/>打篮球<br />
+			日期：<input type="date" name="brithday"/><br />
+			文件：<input type="file" name="img"/><br />
+				 <input type="submit" value="提交" />
+				 <input type="reset" value="重置" />
+				 <input type="button" value="普通按钮" /><br>
+			文本域：<textarea rows="3" cols="20" name="int" placeholder="文本域"></textarea><br />
+			下拉框：<select name="address"><br />
+						<option value="1">北京</option>
+						<option>上海</option>
+						<option selected="selected">广州</option>
+						<option>深圳</option>
+				   </select><br />
+		</form>
+	</body>
+</html>
